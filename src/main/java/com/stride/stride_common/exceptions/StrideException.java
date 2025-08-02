@@ -12,7 +12,7 @@ import lombok.Getter;
 @Getter
 public sealed class StrideException extends RuntimeException
     permits AuthenticationException, AuthorizationException, ValidationException, 
-            BusinessException, ServiceException {
+            BusinessException, ServiceException,EventSerializationException,EventPublishException {
     
     private final String errorCode;
     private final Map<String, Object> context;
